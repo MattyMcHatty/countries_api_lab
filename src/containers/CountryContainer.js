@@ -36,7 +36,7 @@ const CountryContainer = () => {
         </div>
 
         <div>
-                    <FavouriteCountries favourites={favourites} />
+                <FavouriteCountries favourites={favourites} />
         </div>
         </>
     )

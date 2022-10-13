@@ -12,14 +12,9 @@ const CountryDetail = ({selectedCountry, onFavouriteClick}) => {
     }
 
     const saveFavourite = (event) => {
-        console.log("triggered");
         event.preventDefault();
         const chosenCountry = {...selectedCountry};
         onFavouriteClick(chosenCountry);
-        
-        // const copyFavourites = [...favourites, selectedCountry];
-        // setFavourites(copyFavourites)
-        // setNewFavourite("");
     }
 
     return(
@@ -28,8 +23,6 @@ const CountryDetail = ({selectedCountry, onFavouriteClick}) => {
             <p>Population: {selectedCountry.population}</p>
 
                 <button onClick={saveFavourite} value={newFavourite} onChange={handleFavouriteInput}>Add to Favourites</button>
-            
-            
         </div>
     )
 }

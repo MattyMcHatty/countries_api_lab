@@ -11,7 +11,7 @@ const CountryList = ({countries, onCountryClick}) => {
 return(
     <div>
         <ul>
-            {countryItems}
+            {CountryItem}
         </ul>
     </div>
 )
