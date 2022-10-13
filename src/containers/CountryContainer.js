@@ -25,7 +25,8 @@ const CountryContainer = () => {
 
     const onFavouriteClick = function (chosenCountry) {
         const favourite = [...favourites,chosenCountry.name.common]
-        setFavourites(favourite);
+        let uniqueFavourites = [...new Set(favourite)];
+        setFavourites(uniqueFavourites);
     }
 
     return(
@@ -36,7 +37,7 @@ const CountryContainer = () => {
         </div>
 
         <div>
-                <FavouriteCountries favourites={favourites} />
+            <FavouriteCountries favourites={favourites} /> 
         </div>
         </>
     )

@@ -19,7 +19,8 @@ const CountryDetail = ({selectedCountry, onFavouriteClick}) => {
 
     return(
         <div>
-            <h3>{selectedCountry.name.common}</h3>
+            <h3>{selectedCountry.name.common}  {selectedCountry.flag}</h3>
+            <img src={selectedCountry.flags.png} alt=""></img>
             <p>Population: {selectedCountry.population}</p>
 
                 <button onClick={saveFavourite} value={newFavourite} onChange={handleFavouriteInput}>Add to Favourites</button>
